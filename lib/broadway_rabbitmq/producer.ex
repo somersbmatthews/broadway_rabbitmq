@@ -264,7 +264,7 @@ defmodule BroadwayRabbitMQ.Producer do
       metadata: Map.take(meta, config[:metadata]),
       acknowledger: {__MODULE__, _ack_ref = channel, ack_data}
     }
-
+    Broadway.Telemetry.tracker("message produced in producer, handle_info in producer.ex in broadway_rabbitmq", message)
     {:noreply, [message], state}
   end
 
