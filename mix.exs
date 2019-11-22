@@ -27,7 +27,7 @@ defmodule BroadwayRabbitMQ.MixProject do
   defp deps do
     [
 
-      {:broadway_from_git, git: "https://github.com/somersbmatthews/broadway_test.git"},
+      {:broadway, git: "https://github.com/somersbmatthews/broadway_test.git"},
       {:amqp, "~> 1.3"},
       {:ex_doc, ">= 0.19.0", only: :docs}
     ]
